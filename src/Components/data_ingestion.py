@@ -52,10 +52,10 @@ class DataIngestion:
         
 
 ## run Data Ingestion
-
 if __name__ == '__main__':
     obj = DataIngestion()
     train_data_path,test_data_path=obj.initiate_data_ingestion()
     data_trasformation = DataTransformation()
-    print(train_data_path, test_data_path)
-    train_arr, test_arr = data_trasformation.initiate_data_transformation(train_data_path,test_data_path)
+    data = data_trasformation.initiate_data_transformation(train_data_path, test_data_path)
+    #print(data)
+    train_arr, test_arr, _ = data

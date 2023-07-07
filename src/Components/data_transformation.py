@@ -105,7 +105,7 @@ class DataTransformation:
             logging.info("Applying preprocessing object on training and testing datasets")
             
             
-            tarin_arr = np.c_[input_feature_train_arr, np.array(target_feature_train_df)]
+            train_arr = np.c_[input_feature_train_arr, np.array(target_feature_train_df)]
             test_arr = np.c_[input_feature_test_df, np.array(target_feature_test_df)]
             
             save_object(
@@ -120,7 +120,7 @@ class DataTransformation:
             return (
                 train_arr,
                 test_arr,
-                self.data_transformation_config.preprocessor_obj_file_path,
+                self.data_transformation_config.preprocessing_obj_file_path,
             )
                         
         except Exception as e:
