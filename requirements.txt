@@ -1,10 +1,8 @@
 pandas
 numpy
-<<<<<<< HEAD
 matplotlib
 datetime
 scikit-learn
 -e .
-=======
-matploblib
->>>>>>> 069dd46a300afcf9fbeffd535f77d8ce09bc3068
+
+

@@ -25,7 +25,7 @@ class DataIngestion:
     def initiate_data_ingestion(self):
         logging.info('Data Ingestion methods Starts')
         try:
-            df=pd.read_csv("C:/Users/tejas/OneDrive/Desktop/iNeuron.ai/gemstone/Notebook/Data/gemstone.csv")
+            df=pd.read_csv(r"Notebook\Data\gemstone.csv")
             logging.info('Dataset read as pandas Dataframe')
             
             os.makedirs(os.path.dirname(self.ingestion_config.raw_data_path),exist_ok=True)
@@ -58,4 +58,4 @@ if __name__ == '__main__':
     train_data_path,test_data_path=obj.initiate_data_ingestion()
     data_trasformation = DataTransformation()
     print(train_data_path, test_data_path)
-    train_arr, test_arr,_ = data_trasformation.initiate_data_transformation(train_data_path,test_data_path)
+    train_arr, test_arr = data_trasformation.initiate_data_transformation(train_data_path,test_data_path)

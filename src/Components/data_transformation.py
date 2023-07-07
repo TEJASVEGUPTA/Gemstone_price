@@ -114,9 +114,15 @@ class DataTransformation:
                 obj = preprocessing_obj
             )
             
-            logging.info("Preprocessor pickel file saved")
-
             
+            logging.info("Preprocessor pickel file saved")
+            
+            return (
+                train_arr,
+                test_arr,
+                self.data_transformation_config.preprocessor_obj_file_path,
+            )
+                        
         except Exception as e:
             logging.info("Exception Occured in the initiate_data_transformation ")
             
